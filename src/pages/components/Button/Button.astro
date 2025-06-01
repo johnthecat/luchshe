@@ -1,0 +1,13 @@
+---
+import './Button.css'
+
+const { onClick } = Astro.props
+---
+
+<div class="relative w-fit z-[1]">
+  <button class="button text-black whitespace-nowrap h-[68px] px-[64px]" onclick={onClick}>
+    <slot/>
+  </button>
+  <div class="button-first-layer"/>
+  <div class="button-second-layer"/>
+</div>
