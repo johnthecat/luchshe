@@ -42,6 +42,6 @@
     transition-delay: 0.05s;
 
     *:hover > & {
-        bottom: -20px;
+        bottom: -22px;
     }
 }
