@@ -6,6 +6,8 @@ import Glow from './Glow.svg';
 import Arrow from './Arrow.svg';
 import Stripes from './Stripes.astro';
 import Button from '../Button/Button.astro';
+
+const { since } = Astro.props;
 ---
 
 <section class="grid grid-cols-12 col-span-12 px-[10px]">
@@ -35,7 +37,7 @@ import Button from '../Button/Button.astro';
         Пройдите бесплатное обучение и получите пошаговый план: от первого клиента до стабильного дохода
       </div>
 
-      <div class="absolute text-[#ECA9B8] right-[49px] bottom-[4px] h-[150px] flex items-center">Старт: 16 июня</div>
+      <div class="absolute text-[#ECA9B8] right-[49px] bottom-[4px] h-[150px] flex items-center">Старт: {since}</div>
     </div>
     <div>
       <div
