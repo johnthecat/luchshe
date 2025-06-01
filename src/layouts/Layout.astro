@@ -1,0 +1,23 @@
+---
+import '../styles/global.css';
+---
+
+<html lang="en" class="h-full">
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/svg+xml" href="/luchshe/favicon.svg" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="generator" content={ Astro.generator } />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap" rel="stylesheet">
+
+  <title>Astro</title>
+</head>
+<body class="h-full flex flex-col items-center overflow-auto bg-linear-to-b from-[#17293A] to-[#43596F] text-[#909FAD]">
+<section class="w-full max-w-[1728px] grid grid-cols-12">
+  <slot />
+</section>
+</body>
+</html>
