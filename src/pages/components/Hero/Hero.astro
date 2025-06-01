@@ -1,12 +1,11 @@
 ---
-import './Hero.css'
+import './Hero.css';
 
 import GooeySplit from './GooeySplit.svg';
 import Glow from './Glow.svg';
 import Arrow from './Arrow.svg';
 import Button from '../Button/Button.astro';
 ---
-
 
 <section class="grid grid-cols-12 col-span-12 px-[10px]">
   <div class="flex flex-col col-span-4">
@@ -17,34 +16,35 @@ import Button from '../Button/Button.astro';
       </div>
     </div>
     <div class="w-full pt-[20px] pr-[20px]">
-      <div class="w-full h-[524px] manga-lines" />
+      <div class="w-full h-[524px] manga-lines"></div>
     </div>
   </div>
   <div class="flex flex-col col-span-8 gap-[10px]">
     <div
-      class="relative flex flex-col bg-[#CC3355] rounded-[30px] gap-[20px] px-[40px] py-[40px] text-[#FDEAC3] h-[393px]">
+      class="relative flex flex-col bg-[#CC3355] rounded-[30px] gap-[20px] px-[40px] py-[40px] text-[#FDEAC3] h-[393px]"
+    >
       <div class="absolute top-[-160px] right-[-30px] w-full z-[-1]">
         <Glow class="w-full" />
       </div>
 
-      <div class="font-[Unbounded] font-bold text-[84px] leading-[1.2] tracking-[3%]">Мы покажем,<br />с чего <span
-        class="inline-block relative top-[12px]"><Arrow /></span> начать!
+      <div class="font-[Unbounded] font-bold text-[84px] leading-[1.2] tracking-[3%]">
+        Мы покажем,<br />с чего <span class="inline-block relative top-[12px]"><Arrow /></span> начать!
       </div>
       <div class="w-[545px]">
         Пройдите бесплатное обучение и получите пошаговый план: от первого клиента до стабильного дохода
       </div>
 
-      <div class="absolute text-[#ECA9B8] right-[49px] bottom-[4px] h-[150px] flex items-center">
-        Старт: 16 июня
-      </div>
+      <div class="absolute text-[#ECA9B8] right-[49px] bottom-[4px] h-[150px] flex items-center">Старт: 16 июня</div>
     </div>
     <div>
-      <div class="relative flex flex-col gap-[20px] rounded-[30px] w-[633px] h-[266px] bg-[#485766] text-[#FDEAC3] p-[50px]">
+      <div
+        class="relative flex flex-col gap-[20px] rounded-[30px] w-[633px] h-[266px] bg-[#485766] text-[#FDEAC3] p-[50px]"
+      >
         <div class="font-[Unbounded] font-bold text-[30px] leading-[44px]">
-          Мы не учим,<br/>а освещаем путь
+          Мы не учим,<br />а освещаем путь
         </div>
         <div>
-          от первых шагов во фрилансе<br/>до открытия собственного агентства
+          от первых шагов во фрилансе<br />до открытия собственного агентства
         </div>
         <div class="absolute top-[100px] left-[90%]">
           <Button>Начать обучение</Button>
