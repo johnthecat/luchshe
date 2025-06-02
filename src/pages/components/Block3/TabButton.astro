@@ -1,12 +1,15 @@
 ---
-const { id, title, initial } = Astro.props;
+const { id, title, initial, highlight } = Astro.props;
 ---
 
 <button
   data-tab=""
   data-active={initial ? 'true' : 'false'}
   data-id={id}
-  class="flex w-full appearance-none items-center justify-between rounded-[10px] bg-white p-[20px] text-left transition-colors data-[active=true]:bg-[#FDEAC3]"
+  class:list={[
+    'flex w-full appearance-none items-center justify-between rounded-[10px] bg-white p-[20px] text-left transition-colors',
+    highlight ? 'data-[active=true]:bg-[#17293B] data-[active=true]:text-white' : 'data-[active=true]:bg-[#FDEAC3]',
+  ]}
 >
   <span class="max-w-[300px] text-[18px] leading-[26px] font-medium">{title}</span>
   <slot name="icon" />

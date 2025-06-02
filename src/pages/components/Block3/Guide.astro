@@ -11,7 +11,7 @@ import Graduation from './Graduation.svg';
     <TabButton id="clients" title="Как позиционировать себя и находить клиентов" />
     <TabButton id="team" title="Как управлять командой и находить сотрудников" />
     <TabButton id="service" title="Как работать с клиентами" />
-    <TabButton id="graduation" title="Экзамен и выпускной"><Graduation slot="icon" /></TabButton>
+    <TabButton id="graduation" title="Экзамен и выпускной" highlight><Graduation slot="icon" /></TabButton>
   </section>
   <div class="absolute top-[40px] bottom-[40px] left-[510px] w-[3px] bg-[#FBF3E3]"></div>
   <div class="w-[700px] pt-[100px]">
@@ -132,9 +132,4 @@ import Graduation from './Graduation.svg';
       });
     });
   });
-
-  if (block) {
-    autoAnimate(block);
-  }
-  console.log(buttons);
 </script>

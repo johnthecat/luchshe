@@ -6,8 +6,6 @@ import Glow from './Glow.svg';
 import Arrow from './Arrow.svg';
 import Stripes from './Stripes.astro';
 import Button from '../Button/Button.astro';
-
-const { since } = Astro.props;
 ---
 
 <section id="hero" class="relative col-span-12 flex px-[10px]">
@@ -26,9 +24,7 @@ const { since } = Astro.props;
     </div>
   </div>
   <div class="flex w-full flex-col gap-[10px]">
-    <div
-      class="relative flex h-[393px] flex-col gap-[20px] rounded-[30px] bg-[#CC3355] px-[40px] py-[40px] text-[#FDEAC3]"
-    >
+    <div class="relative flex flex-col gap-[20px] rounded-[30px] bg-[#CC3355] px-[40px] py-[40px] text-[#FDEAC3]">
       <div class="font-[Unbounded] text-[84px] leading-[1.2] font-bold tracking-[3%]">
         Мы покажем,<br />с чего <span class="relative top-[12px] inline-block"><Arrow /></span> начать!
       </div>
@@ -36,7 +32,7 @@ const { since } = Astro.props;
         Пройдите бесплатное обучение и получите пошаговый план: от первого клиента до стабильного дохода
       </div>
 
-      <div class="absolute right-[49px] bottom-[4px] flex h-[150px] items-center text-[#ECA9B8]">Стартуем {since}</div>
+      <div class="absolute right-[49px] bottom-[4px] flex h-[150px] items-center text-[#ECA9B8]">Стартуем 16 июня</div>
     </div>
     <div>
       <div

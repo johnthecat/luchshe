@@ -1,0 +1,34 @@
+---
+import Registration from './Registration.svg';
+import Input from './Input.astro';
+---
+
+<section class="col-span-12 m-[10px] flex gap-[20px] rounded-[30px] bg-[#485766] py-[80px] text-[#FDEAC3]">
+  <div class="py-[181px] pr-[60px] pl-[200px]">
+    <div class="flex w-[571px] flex-col gap-[40px]">
+      <div class="font-[Unbounded] text-[30px] leading-[44px] font-bold">
+        Мы мечтаем создать сообщество единомышленников
+      </div>
+      <div class="font-[Unbounded] text-[20px] leading-[30px] font-bold">
+        Чтобы развиваться и помогать<br />друг другу. Присоединяйтесь —<br />давайте проложим путь к успеху<br />вместе!
+      </div>
+    </div>
+  </div>
+  <form class="flex w-[320px] flex-col gap-[20px] text-white">
+    <Registration />
+    <div class="font-[Unbounded] text-[30px] leading-none font-bold">Регистрация</div>
+    <Input name="name" label="Имя" placeholder="Константин" required />
+    <Input type="email" name="email" label="Email" placeholder="luchshe@elama.ru" required />
+    <Input type="phone" name="phone" label="Телефон" placeholder="+7 000 000-00-00" required />
+    <Input name="telegram" label="Ник в Telegram" placeholder="@luchshe_s_elama" required />
+    <span class="text-[16px] leading-[24px] text-[#F2F1F34D]">Здесь будет проходить всё общение</span>
+    <button
+      type="submit"
+      class="h-[67px] w-full appearance-none rounded-[18px] bg-[#E8F879] text-center text-[18px] leading-[24px] font-medium text-black"
+      >Отправить</button
+    >
+    <span class="text-[16px] leading-[24px] text-[#F2F1F34D]"
+      >Нажимая кнопку, вы даёте согласие<br />на обработку персональных данных</span
+    >
+  </form>
+</section>

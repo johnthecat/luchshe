@@ -1,0 +1,18 @@
+---
+const { type = 'text', label, name, placeholder, required } = Astro.props;
+---
+
+<label class="relative w-full">
+  <span class="absolute top-[-3px] left-[12px] bg-[#485766] px-[4px] text-[13px] leading-[24px]"
+    >{label}{required ? <span class="relative pl-[4px] text-[#CC3355]">*</span> : ''}</span
+  >
+  <div class="mt-[7px] h-[67px] rounded-[4px] border border-[#6B737A] focus-within:ring-1">
+    <input
+      required={required}
+      type={type}
+      name={name}
+      placeholder={placeholder}
+      class="h-full w-full appearance-none px-[16px] text-[16px] focus:outline-none"
+    />
+  </div>
+</label>
