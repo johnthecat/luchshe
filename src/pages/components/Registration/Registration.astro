@@ -14,7 +14,7 @@ import Input from './Input.astro';
       </div>
     </div>
   </div>
-  <form class="flex w-[320px] flex-col gap-[20px] text-white">
+  <form id="registration-form" class="flex w-[320px] flex-col gap-[20px] text-white">
     <Registration />
     <div class="font-[Unbounded] text-[30px] leading-none font-bold">Регистрация</div>
     <Input name="name" label="Имя" placeholder="Константин" required />
@@ -32,3 +32,17 @@ import Input from './Input.astro';
     >
   </form>
 </section>
+<script>
+  const form = document.querySelector('#registration-form');
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const name = formData.get('name');
+      const email = formData.get('email');
+      const phone = formData.get('phone');
+      const telegram = formData.get('telegram');
+      console.log(name, email, phone, telegram);
+    });
+  }
+</script>
