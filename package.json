@@ -12,6 +12,7 @@
     "@formkit/auto-animate": "^0.8.2",
     "@tailwindcss/vite": "^4.1.8",
     "astro": "^5.8.1",
+    "gsap": "^3.13.0",
     "prettier-plugin-tailwindcss": "^0.6.12",
     "tailwindcss": "^4.1.8"
   },

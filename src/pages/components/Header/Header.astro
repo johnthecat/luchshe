@@ -5,7 +5,7 @@ import Rays from './Rays.svg';
 ---
 
 <header class="relative col-span-12 pt-[60px] px-[10px]">
-  <div class="flex flex-col gap-[10px]">
+  <div id="header-logo" class="flex flex-col gap-[10px]">
     <HeaderLogo />
     <div class="ps-[9px] pb-[20px] w-[510px]">
       Сообщество и образовательная среда нового поколения для специалистов диджитал-рынка
@@ -13,6 +13,33 @@ import Rays from './Rays.svg';
   </div>
   <div class="absolute right-[41px] top-[34px]">
     <FlashlightIcon />
-    <Rays class="absolute right-[59px] top-[68px]" />
+    <Rays id="header-rays" class="absolute right-[59px] top-[68px]" />
   </div>
 </header>
+
+<script>
+  import { gsap } from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+  const logo = document.querySelector('#header-logo');
+  const rays = document.querySelector('#header-rays');
+  if (logo) {
+    const anim = gsap.fromTo(logo, { autoAlpha: 0, x: -50 }, { duration: 0.5, autoAlpha: 1, x: 0 });
+    ScrollTrigger.create({
+      trigger: logo,
+      animation: anim,
+      toggleActions: 'play none none none',
+      once: true,
+    });
+  }
+  if (rays) {
+    const a = gsap.timeline({});
+    const anim = gsap.from(rays, { autoAlpha: 0, x: -50, duration: 0.5 });
+    ScrollTrigger.create({
+      trigger: rays,
+      animation: anim,
+      toggleActions: 'play none none none',
+      once: true,
+    });
+  }
+</script>

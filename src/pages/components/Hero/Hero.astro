@@ -10,7 +10,7 @@ import Button from '../Button/Button.astro';
 const { since } = Astro.props;
 ---
 
-<section class="relative grid grid-cols-12 col-span-12 px-[10px]">
+<section id="hero" class="relative grid grid-cols-12 col-span-12 px-[10px]">
   <div class="absolute top-[-160px] right-0 w-fit">
     <Glow />
   </div>
@@ -55,3 +55,19 @@ const { since } = Astro.props;
     </div>
   </div>
 </section>
+
+<script>
+  import { gsap } from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+  const hero = document.querySelector('#hero');
+  if (hero) {
+    const anim = gsap.fromTo(hero, { autoAlpha: 0, y: 50 }, { delay: 0.5, duration: 0.5, autoAlpha: 1, y: 0 });
+    ScrollTrigger.create({
+      trigger: hero,
+      animation: anim,
+      toggleActions: 'play none none none',
+      once: true,
+    });
+  }
+</script>
