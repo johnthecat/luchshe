@@ -1,31 +1,32 @@
 ---
 import './ScrollBlock.css';
-import Arrow from './Arrow.svg';
+import Lightning from './Lightning.svg';
+import Flame from './Flame.svg';
 import SecondaryScrollBlock from './SecondaryScrollBlock.astro';
 import PrimaryScrollBlock from './PrimaryScrollBlock.astro';
 ---
 
 <section class="relative top-[-400px] flex h-[150vh] flex-col items-center">
   <PrimaryScrollBlock class="bg-[#CC3355] text-[#FDEAC3]">
-    <Fragment slot="title">Почему выбирают нас <Arrow class="inline-block" /></Fragment>
-    <Fragment slot="description">Учим тому, что работает <br />на практике</Fragment>
+    <Fragment slot="title">Почему<br />с нами<br />лучше <Flame class="relative top-[-15px] inline-block" /></Fragment>
+    <Fragment slot="description">учим тому, что реально работает</Fragment>
   </PrimaryScrollBlock>
   <SecondaryScrollBlock class="red-block top-[400px] mt-[25vh] bg-[#CC3355] text-[#FDEAC3]">
-    Создаем сообщество, обеспечиваем вас полезным знакомствами
+    знакомим с экспертами<br />и создаём сообщество единомышленников
   </SecondaryScrollBlock>
   <SecondaryScrollBlock class="red-block top-[400px] mt-[25vh] bg-[#CC3355] text-[#FDEAC3]">
-    Делимся эксклюзивными шаблонами и материалами
+    делимся эксклюзивными шаблонами и материалами
   </SecondaryScrollBlock>
 </section>
 <section class="relative flex h-[150vh] flex-col items-center">
   <PrimaryScrollBlock class="bg-[#318ABA] text-[#FDEAC3]">
-    <Fragment slot="title">Мы покажем, как <Arrow class="inline-block" /></Fragment>
-    <Fragment slot="description">Находить первых клиентов</Fragment>
+    <Fragment slot="title">Мы покажем, как <Lightning class="relative top-[-15px] inline-block" /></Fragment>
+    <Fragment slot="description">найти первых клиентов и работать с ними годами</Fragment>
   </PrimaryScrollBlock>
   <SecondaryScrollBlock class="blue-block top-[400px] mt-[25vh] bg-[#318ABA] text-[#FDEAC3]">
-    Управлять командой и вести проекты
+    управлять командой и вести проекты
   </SecondaryScrollBlock>
   <SecondaryScrollBlock class="blue-block top-[400px] mt-[25vh] bg-[#318ABA] text-[#FDEAC3]">
-    Зарабатывать на фрилансе и строить собственное агентство
+    построить собственное агентство
   </SecondaryScrollBlock>
 </section>

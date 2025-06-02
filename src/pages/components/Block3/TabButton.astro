@@ -1,10 +1,10 @@
 ---
-const { id, title, active } = Astro.props;
+const { id, title, initial } = Astro.props;
 ---
 
 <button
   data-tab=""
-  data-active={active ? 'true' : 'false'}
+  data-active={initial ? 'true' : 'false'}
   data-id={id}
   class="flex w-full appearance-none items-center justify-between rounded-[10px] bg-white p-[20px] text-left transition-colors data-[active=true]:bg-[#FDEAC3]"
 >

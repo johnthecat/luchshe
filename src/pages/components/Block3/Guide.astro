@@ -7,11 +7,11 @@ import Graduation from './Graduation.svg';
 <section class="relative flex shrink-0 gap-[60px]">
   <section class="flex h-full w-[511px] flex-col gap-[20px] rounded-[30px] border border-[#B7B6B1] p-[60px] pr-[48px]">
     <div class="font-[Unbounded] text-[30px] leading-none font-bold">Что в программе</div>
-    <TabButton id="open" title="Как открыть своё агентство" active />
-    <TabButton id="clients" title="Позиционирование и клиенты" />
-    <TabButton id="team" title="Работа в команде: Как находить и увольнять сотрудников" />
-    <TabButton id="service" title="Клиентский сервис" />
-    <TabButton id="graduation" title="Тестирование и выпускной"><Graduation slot="icon" /></TabButton>
+    <TabButton id="open" title="Как открыть своё агентство" initial />
+    <TabButton id="clients" title="Как позиционировать себя и находить клиентов" />
+    <TabButton id="team" title="Как управлять командой и находить сотрудников" />
+    <TabButton id="service" title="Как работать с клиентами" />
+    <TabButton id="graduation" title="Экзамен и выпускной"><Graduation slot="icon" /></TabButton>
   </section>
   <div class="absolute top-[40px] bottom-[40px] left-[510px] w-[3px] bg-[#FBF3E3]"></div>
   <div class="w-[700px] pt-[100px]">
@@ -32,7 +32,7 @@ import Graduation from './Graduation.svg';
           </div>
           <div>
             <OnlineBadge />
-            <div class="font-bold">Нетворкинг. Чем живет агентство. День открытых дверей и экскурсия по офису</div>
+            <div class="font-bold">День открытых дверей и экскурсия по офису ведущего агентства</div>
           </div>
         </div>
       </div>
@@ -40,16 +40,16 @@ import Graduation from './Graduation.svg';
         <div class="flex flex-col gap-[30px]">
           <div>
             <OnlineBadge online />
-            <div>Как позиционировать себя и находить клиентов</div>
+            <div>Как продавать свои услуги и искать клиентов</div>
           </div>
           <div>
             <OnlineBadge online />
-            <div>Мастер-класс по разработке УТП и выбору специализации</div>
+            <div>Мастер-класс. Как выбрать специализацию и разработать уникальное торговое предложение</div>
           </div>
           <div>
             <OnlineBadge />
             <div class="font-bold">
-              Встреча в офисе ментора. Тема - как готовить КП и мастер-класс по убийству лидов
+              Мастер-класс в офисе ментора. Как готовить коммерческое предложение и работать с лидами
             </div>
           </div>
         </div>
@@ -58,15 +58,15 @@ import Graduation from './Graduation.svg';
         <div class="flex flex-col gap-[30px]">
           <div>
             <OnlineBadge online />
-            <div>Управление командой. Как найти экспертов и мотивировать их</div>
+            <div>Как находить экспертов и мотивировать их</div>
           </div>
           <div>
             <OnlineBadge online />
-            <div>Мастер-класс по чтению резюме и созданию тестовых заданий</div>
+            <div>Мастер-класс. Как читать резюме и создавать тестовые задания</div>
           </div>
           <div>
             <OnlineBadge />
-            <div class="font-bold">Встреча в офисе ментора. Тема - работа в команде</div>
+            <div class="font-bold">Мастер-класс в офисе ментора. Как работать с командой и в команде</div>
           </div>
         </div>
       </div>
@@ -74,22 +74,19 @@ import Graduation from './Graduation.svg';
         <div class="flex flex-col gap-[30px]">
           <div>
             <OnlineBadge online />
-            <div>Как работать с клиентами годы, а не месяцы</div>
+            <div>Как вести клиентов годы, а не месяцы</div>
           </div>
           <div>
             <OnlineBadge />
-            <div class="font-bold">
-              Встреча в офисе eLama. Мастер-класс «Разбор подходов, лайфхакер и принципов по взаимодействию команды с
-              клиентами»
-            </div>
+            <div class="font-bold">Мастер-класс в офисе eLama. Как построить взаимодействие команды с клиентами</div>
           </div>
           <div>
             <OnlineBadge online />
-            <div>«Как растить средний чек и лояльность клиентов вашего агентства»</div>
+            <div>Как повышать средний чек и лояльность клиентов</div>
           </div>
           <div>
             <OnlineBadge online />
-            <div>Как зарабатывать в агентстве: из чего складывается маржа и цена</div>
+            <div>Как агентству зарабатывать: из чего складывается маржа и цена</div>
           </div>
         </div>
       </div>
@@ -97,11 +94,11 @@ import Graduation from './Graduation.svg';
         <div class="flex flex-col gap-[30px]">
           <div>
             <OnlineBadge online />
-            <div>Тестирование, по результатам которого выдаётся сертификат</div>
+            <div>Экзамен для проверки знаний</div>
           </div>
           <div>
             <OnlineBadge />
-            <div class="font-bold">Выпускной в Санкт-Петербурге</div>
+            <div class="font-bold">Выпускной и вручение сертификатов</div>
           </div>
         </div>
       </div>
