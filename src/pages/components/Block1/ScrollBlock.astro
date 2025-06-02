@@ -3,13 +3,53 @@ import ScrollLabels from './ScrollLabels.svg';
 ---
 
 <div
-  class="sticky top-[75px] flex h-[536px] w-[749px] shrink-0 items-center rounded-[30px] bg-[#17293B] px-[60px] text-[#FDEAC3]"
+  class="sticky top-[75px] flex h-[536px] w-[749px] shrink-0 items-center overflow-hidden rounded-[30px] bg-[#17293B] px-[60px] text-[#FDEAC3]"
 >
-  <span class="font-[Unbounded] text-[30px] leading-[44px] font-bold">
-    Многие начинающие специалисты<br />опасаются первых<br />шагов
-  </span>
-  <div class="absolute top-0 right-[50px] bottom-0 m-auto h-fit">
+  <div
+    id="block-1-scroll-title-1"
+    class="absolute top-[200px] left-[60px] w-[600px] font-[Unbounded] text-[30px] leading-[44px] font-bold"
+  >
+    Первые шаги —<br />самые страшные
+  </div>
+  <div
+    id="block-1-scroll-title-2"
+    class="absolute top-[200px] left-[60px] w-[600px] font-[Unbounded] text-[30px] leading-[44px] font-bold"
+  >
+    Мы понимаем эти страхи<br />и поможем их преодолеть!
+  </div>
+  <div id="block-1-scroll-labels" class="absolute top-0 right-[80px] bottom-0 m-auto h-fit">
     <ScrollLabels />
   </div>
 </div>
-<div class="absolute top-[100vh] left-0 h-2 w-2"></div>
+<div id="block-1-scroll-trigger" class="absolute top-[75vh] left-0 h-2 w-2 bg-red-400"></div>
+
+<script>
+  import { gsap } from 'gsap';
+
+  const block1 = document.querySelector('#block-1-scroll-title-1');
+  const block2 = document.querySelector('#block-1-scroll-title-2');
+  const trigger = document.querySelector('#block-1-scroll-trigger');
+  const labels = document.querySelector('#block-1-scroll-labels');
+
+  const scrollTrigger = {
+    trigger: trigger,
+    start: 'top center',
+    end: 'bottom center',
+    toggleActions: 'restart none reverse none',
+  };
+
+  gsap
+    .timeline({ scrollTrigger })
+    .from(block1, { autoAlpha: 1, x: 0, rotateZ: 0 })
+    .to(block1, { autoAlpha: 0, x: -50, rotateZ: -10 });
+
+  gsap
+    .timeline({ scrollTrigger })
+    .from(labels, { autoAlpha: 1, x: 0, rotateZ: 0 })
+    .to(labels, { autoAlpha: 0, x: 100, rotateZ: 20 });
+
+  gsap
+    .timeline({ scrollTrigger })
+    .from(block2, { autoAlpha: 0, x: 50, rotateZ: 10 })
+    .to(block2, { autoAlpha: 1, x: 0, rotateZ: 0 });
+</script>

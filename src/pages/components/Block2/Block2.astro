@@ -6,19 +6,3 @@ import ScrollLine from './ScrollLine.astro';
   <section class="relative -top-px h-[400px] rounded-b-[30px] bg-[#F2F1F3] text-[#17293B]"></section>
   <ScrollLine />
 </div>
-
-<script>
-  import { gsap } from 'gsap';
-  import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-  const block = document.querySelector('#block-2');
-  if (block) {
-    const anim = gsap.fromTo(block, { autoAlpha: 0, y: 50 }, { delay: 0.5, duration: 0.5, autoAlpha: 1, y: 0 });
-    ScrollTrigger.create({
-      trigger: block,
-      animation: anim,
-      toggleActions: 'play none none none',
-      once: true,
-    });
-  }
-</script>
