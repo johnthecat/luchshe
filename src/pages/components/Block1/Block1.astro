@@ -4,8 +4,25 @@ import Description from './Description.astro';
 ---
 
 <section
+  id="block-1"
   class="col-span-12 flex gap-[80px] bg-[#F2F1F3] px-[10px] mt-[20px] h-[200vh] pt-[20px] pb-[60px] text-[#17293B] rounded-t-[30px]"
 >
   <ScrollBlock />
   <Description />
 </section>
+
+<script>
+  import { gsap } from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+  const block = document.querySelector('#block-1');
+  if (block) {
+    const anim = gsap.fromTo(block, { autoAlpha: 0, y: 50 }, { delay: 0.5, duration: 0.5, autoAlpha: 1, y: 0 });
+    ScrollTrigger.create({
+      trigger: block,
+      animation: anim,
+      toggleActions: 'play none none none',
+      once: true,
+    });
+  }
+</script>
