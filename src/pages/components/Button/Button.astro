@@ -4,8 +4,8 @@ import './Button.css';
 const { onClick } = Astro.props;
 ---
 
-<div class="relative w-fit z-[1]">
-  <button class="button text-black whitespace-nowrap h-[68px] px-[64px]" onclick={onClick}>
+<div class="relative z-[1] w-fit">
+  <button class="button h-[68px] px-[64px] whitespace-nowrap text-black" onclick={onClick}>
     <slot />
   </button>
   <div class="button-first-layer"></div>

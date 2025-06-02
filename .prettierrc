@@ -8,8 +8,9 @@
   "arrowParens": "always",
   "endOfLine": "lf",
   "plugins": [
-    "prettier-plugin-tailwindcss",
-    "prettier-plugin-astro"
+    "prettier-plugin-astro",
+    "prettier-plugin-tailwindcss"
   ],
-  "proseWrap": "always"
+  "proseWrap": "always",
+  "tailwindAttributes": ["class", "class:list"]
 }

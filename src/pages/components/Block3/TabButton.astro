@@ -6,8 +6,8 @@ const { id, title, active } = Astro.props;
   data-tab=""
   data-active={active ? 'true' : 'false'}
   data-id={id}
-  class="flex items-center justify-between appearance-none text-left p-[20px] w-full bg-white data-[active=true]:bg-[#FDEAC3] rounded-[10px] transition-colors"
+  class="flex w-full appearance-none items-center justify-between rounded-[10px] bg-white p-[20px] text-left transition-colors data-[active=true]:bg-[#FDEAC3]"
 >
-  <span class="max-w-[300px] font-medium text-[18px] leading-[26px]">{title}</span>
+  <span class="max-w-[300px] text-[18px] leading-[26px] font-medium">{title}</span>
   <slot name="icon" />
 </button>

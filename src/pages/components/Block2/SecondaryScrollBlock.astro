@@ -2,6 +2,6 @@
 const { class: className } = Astro.props;
 ---
 
-<div class:list={['sticky flex flex-col gap-[80px] w-[800px] h-[309px] p-[50px] rounded-[30px] shrink-0', className]}>
-  <div class="font-[Unbounded] font-bold text-[30px] leading-[44px]"><slot /></div>
+<div class:list={['sticky flex h-[309px] w-[800px] shrink-0 flex-col gap-[80px] rounded-[30px] p-[50px]', className]}>
+  <div class="font-[Unbounded] text-[30px] leading-[44px] font-bold"><slot /></div>
 </div>

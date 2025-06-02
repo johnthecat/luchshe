@@ -2,7 +2,7 @@
 const { class: className } = Astro.props;
 ---
 
-<div class:list={['sticky flex flex-col gap-[80px] h-fit top-[20px] w-[800px] p-[50px] rounded-[30px]', className]}>
-  <div class="font-[Unbounded] font-bold text-[84px] leading-[1.2] tracking-[3%]"><slot name="title" /></div>
-  <div class="font-[Unbounded] font-bold text-[30px] leading-[44px]"><slot name="description" /></div>
+<div class:list={['sticky top-[20px] flex h-fit w-[800px] flex-col gap-[80px] rounded-[30px] p-[50px]', className]}>
+  <div class="font-[Unbounded] text-[84px] leading-[1.2] font-bold tracking-[3%]"><slot name="title" /></div>
+  <div class="font-[Unbounded] text-[30px] leading-[44px] font-bold"><slot name="description" /></div>
 </div>
