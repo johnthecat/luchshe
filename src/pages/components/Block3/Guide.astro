@@ -1,0 +1,138 @@
+---
+import TabButton from './TabButton.astro';
+import OnlineBadge from './OnlineBadge.astro';
+import Graduation from './Graduation.svg';
+---
+
+<section class="relative flex gap-[60px] shrink-0">
+  <section class="flex flex-col gap-[20px] w-[511px] h-full border border-[#B7B6B1] rounded-[30px] p-[60px] pr-[48px]">
+    <div class="font-[Unbounded] font-bold text-[30px] leading-none">Что в программе</div>
+    <TabButton id="open" title="Как открыть своё агентство" active />
+    <TabButton id="clients" title="Позиционирование и клиенты" />
+    <TabButton id="team" title="Работа в команде: Как находить и увольнять сотрудников" />
+    <TabButton id="service" title="Клиентский сервис" />
+    <TabButton id="graduation" title="Тестирование и выпускной"><Graduation slot="icon" /></TabButton>
+  </section>
+  <div class="absolute bg-[#FBF3E3] w-[3px] left-[510px] top-[40px] bottom-[40px]"></div>
+  <div class="w-[700px] flex items-center">
+    <section data-tabblock="" class="w-[500px] flex items-center">
+      <div data-tabcontent="" data-active="true" data-id="open" class="hidden data-[active=true]:block">
+        <div class="flex flex-col gap-[30px]">
+          <div>
+            <OnlineBadge online />
+            <div>Особенности агентского бизнеса. Чем занимается и как зарабатывает агентство</div>
+          </div>
+          <div>
+            <OnlineBadge online />
+            <div>Юридические основы. Как зарегистрироваться, оформить договоры и платить налоги</div>
+          </div>
+          <div>
+            <OnlineBadge online />
+            <div>Как правильно рассчитать юнит-экономику агентства</div>
+          </div>
+          <div>
+            <OnlineBadge />
+            <div class="font-bold">Нетворкинг. Чем живет агентство. День открытых дверей и экскурсия по офису</div>
+          </div>
+        </div>
+      </div>
+      <div data-tabcontent="" data-active="false" data-id="clients" class="hidden data-[active=true]:block">
+        <div class="flex flex-col gap-[30px]">
+          <div>
+            <OnlineBadge online />
+            <div>Как позиционировать себя и находить клиентов</div>
+          </div>
+          <div>
+            <OnlineBadge online />
+            <div>Мастер-класс по разработке УТП и выбору специализации</div>
+          </div>
+          <div>
+            <OnlineBadge />
+            <div>Встреча в офисе ментора. Тема - как готовить КП и мастер-класс по убийству лидов</div>
+          </div>
+        </div>
+      </div>
+      <div data-tabcontent="" data-active="false" data-id="team" class="hidden data-[active=true]:block">
+        <div class="flex flex-col gap-[30px]">
+          <div>
+            <OnlineBadge online />
+            <div>Управление командой. Как найти экспертов и мотивировать их</div>
+          </div>
+          <div>
+            <OnlineBadge online />
+            <div>Мастер-класс по чтению резюме и созданию тестовых заданий</div>
+          </div>
+          <div>
+            <OnlineBadge />
+            <div>Встреча в офисе ментора. Тема - работа в команде</div>
+          </div>
+        </div>
+      </div>
+      <div data-tabcontent="" data-active="false" data-id="service" class="hidden data-[active=true]:block">
+        <div class="flex flex-col gap-[30px]">
+          <div>
+            <OnlineBadge online />
+            <div>Как работать с клиентами годы, а не месяцы</div>
+          </div>
+          <div>
+            <OnlineBadge online />
+            <div>Мастер-класс по чтению резюме и созданию тестовых заданий</div>
+          </div>
+          <div>
+            <OnlineBadge />
+            <div>Встреча в офисе ментора. Тема - работа в команде</div>
+          </div>
+        </div>
+      </div>
+      <div data-tabcontent="" data-active="false" data-id="graduation" class="hidden data-[active=true]:block">
+        <div class="flex flex-col gap-[30px]">
+          <div>
+            <OnlineBadge online />
+            <div>Как работать с клиентами годы, а не месяцы</div>
+          </div>
+          <div>
+            <OnlineBadge online />
+            <div>Мастер-класс по чтению резюме и созданию тестовых заданий</div>
+          </div>
+          <div>
+            <OnlineBadge />
+            <div>Встреча в офисе ментора. Тема - работа в команде</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</section>
+
+<script>
+  import autoAnimate from '@formkit/auto-animate';
+
+  const buttons = document.querySelectorAll('[data-tab=""]') as NodeListOf<HTMLElement>;
+  const content = document.querySelectorAll('[data-tabcontent=""]') as NodeListOf<HTMLElement>;
+  const block = document.querySelector('[data-tabblock=""]');
+
+  buttons.forEach((b) => {
+    b.addEventListener('click', (event) => {
+      const selectedButton = event.currentTarget as HTMLElement | null;
+      if (!selectedButton) return;
+
+      selectedButton.dataset.active = 'true';
+      buttons.forEach((button) => {
+        if (selectedButton === button) {
+          return;
+        }
+        button.dataset.active = 'false';
+      });
+
+      const id = selectedButton.dataset.id;
+      content.forEach((content) => {
+        content.dataset.active = content.dataset.id === id ? 'true' : 'false';
+      });
+    });
+  });
+
+  if (block) {
+    autoAnimate(block);
+  }
+  console.log(buttons);
+</script>

@@ -1,21 +1,17 @@
 ---
 import Button from '../Button/Button.astro';
-import QA from './QA.astro';
+import Guide from './Guide.astro';
 ---
 
-<section class="relative col-span-12 pt-[80px]">
-  <div class="absolute w-fit top-[40px] left-0 right-0 mx-auto">
+<section class="relative col-span-12 pt-[120px]">
+  <div class="absolute w-fit top-[80px] left-0 right-0 mx-auto">
     <Button>Начать обучение</Button>
   </div>
-  <section class="w-full bg-[#FBF3E3] text-[#17293B] rounded-[30px] px-[10px] pb-[20px] pt-[63px]">
-    <section class="flex h-[640px]">
-      <div class="relative w-[448px] h-full border border-[#B7B6B1] rounded-[30px] shrink-0">
-        <div class="absolute right-[-2px] top-[30px] bottom-[30px] w-[2px] bg-[#FBF3E3]"></div>
-      </div>
-      <div class="flex flex-col gap-[20px] w-full h-full border border-[#B7B6B1] rounded-[30px] p-[60px]">
-        <div class="font-[Unbounded] font-bold text-[30px] leading-none">Тут нужен заголовок<br />нормальный</div>
-        <QA />
-      </div>
+  <section
+    class="flex flex-col gap-[10px] w-full bg-[#F2F1F3] text-[#384C61] rounded-[30px] px-[10px] pb-[20px] pt-[63px]"
+  >
+    <section class="flex h-[637px] mb-[120px] justify-center shrink-0">
+      <Guide />
     </section>
     <section class="flex flex-col items-center pt-[40px]">
       <div class="flex flex-col gap-[10px] w-[1200px]">

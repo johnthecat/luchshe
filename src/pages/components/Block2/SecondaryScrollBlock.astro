@@ -1,0 +1,7 @@
+---
+const { class: className } = Astro.props;
+---
+
+<div class:list={['sticky flex flex-col gap-[80px] w-[800px] h-[309px] p-[50px] rounded-[30px] shrink-0', className]}>
+  <div class="font-[Unbounded] font-bold text-[30px] leading-[44px]"><slot /></div>
+</div>
