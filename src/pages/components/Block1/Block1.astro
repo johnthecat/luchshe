@@ -13,16 +13,9 @@ import Description from './Description.astro';
 
 <script>
   import { gsap } from 'gsap';
-  import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
   const block = document.querySelector('#block-1');
-  if (block) {
-    const anim = gsap.fromTo(block, { autoAlpha: 0, y: 50 }, { delay: 0.5, duration: 0.5, autoAlpha: 1, y: 0 });
-    ScrollTrigger.create({
-      trigger: block,
-      animation: anim,
-      toggleActions: 'play none none none',
-      once: true,
-    });
-  }
+  const tl = gsap.timeline();
+
+  tl.fromTo(block, { autoAlpha: 0, y: 50 }, { delay: 0.5, duration: 0.5, autoAlpha: 1, y: 0 });
 </script>

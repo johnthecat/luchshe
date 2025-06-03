@@ -19,27 +19,32 @@ import Rays from './Rays.svg';
 
 <script>
   import { gsap } from 'gsap';
-  import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
   const logo = document.querySelector('#header-logo');
   const rays = document.querySelector('#header-rays');
-  if (logo) {
-    const anim = gsap.fromTo(logo, { autoAlpha: 0, x: -50 }, { duration: 0.5, autoAlpha: 1, x: 0 });
-    ScrollTrigger.create({
-      trigger: logo,
-      animation: anim,
-      toggleActions: 'play none none none',
-      once: true,
-    });
-  }
-  if (rays) {
-    const a = gsap.timeline({});
-    const anim = gsap.from(rays, { autoAlpha: 0, x: -50, duration: 0.5 });
-    ScrollTrigger.create({
-      trigger: rays,
-      animation: anim,
-      toggleActions: 'play none none none',
-      once: true,
-    });
-  }
+
+  const tl = gsap.timeline();
+  tl.fromTo(
+    logo,
+    {
+      autoAlpha: 0,
+      x: -50,
+    },
+    {
+      duration: 0.5,
+      autoAlpha: 1,
+      x: 0,
+    },
+  ).fromTo(
+    rays,
+    {
+      autoAlpha: 0,
+      duration: 0.5,
+      delay: 100,
+      ease: 'bounce.out',
+    },
+    {
+      autoAlpha: 1,
+    },
+  );
 </script>

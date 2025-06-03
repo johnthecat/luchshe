@@ -19,7 +19,7 @@ import Button from '../Button/Button.astro';
         <GooeySplit />
       </div>
     </div>
-    <div class="w-full pt-[20px]">
+    <div class="w-full pt-[20px] pr-[10px]">
       <Stripes />
     </div>
   </div>
@@ -54,16 +54,9 @@ import Button from '../Button/Button.astro';
 
 <script>
   import { gsap } from 'gsap';
-  import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-  const hero = document.querySelector('#hero');
-  if (hero) {
-    const anim = gsap.fromTo(hero, { autoAlpha: 0, y: 50 }, { delay: 0.5, duration: 0.5, autoAlpha: 1, y: 0 });
-    ScrollTrigger.create({
-      trigger: hero,
-      animation: anim,
-      toggleActions: 'play none none none',
-      once: true,
-    });
-  }
+  const block = document.querySelector('#hero');
+  const tl = gsap.timeline();
+
+  tl.fromTo(block, { autoAlpha: 0, y: 50 }, { delay: 0.5, duration: 0.5, autoAlpha: 1, y: 0 });
 </script>
