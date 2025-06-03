@@ -20,32 +20,69 @@ import Input from './Input.astro';
   <form id="registration-form" class="flex w-[320px] flex-col gap-[20px] text-white">
     <RegistrationIcon />
     <div class="font-[Unbounded] text-[30px] leading-none font-bold">Регистрация</div>
-    <Input name="name" label="Имя" placeholder="Константин" required />
-    <Input type="email" name="email" label="Email" placeholder="luchshe@elama.ru" required />
-    <Input type="phone" name="phone" label="Телефон" placeholder="+7 000 000-00-00" required />
-    <Input name="telegram" label="Ник в Telegram" placeholder="@luchshe_s_elama" required />
-    <span class="text-[16px] leading-[24px] text-[#F2F1F34D]">Здесь будет проходить всё общение</span>
-    <button
-      type="submit"
-      class="h-[67px] w-full appearance-none rounded-[18px] bg-[#E8F879] text-center text-[18px] leading-[24px] font-medium text-black"
-      >Отправить</button
-    >
-    <span class="text-[16px] leading-[24px] text-[#F2F1F34D]"
-      >Нажимая кнопку, вы даёте согласие<br />на обработку персональных данных</span
-    >
+
+    <fieldset id="registration-fieldset" class="flex flex-col gap-[20px]">
+      <Input name="name" label="Имя" placeholder="Константин" required />
+      <Input type="email" name="email" label="Email" placeholder="luchshe@elama.ru" required />
+      <Input type="phone" name="phone" label="Телефон" placeholder="+7 000 000-00-00" required />
+      <Input name="telegram" label="Ник в Telegram" placeholder="@luchshe_s_elama" required />
+
+      <span class="text-[16px] leading-[24px] text-[#F2F1F34D]">Здесь будет проходить всё общение</span>
+
+      <button
+        id="registration-submit"
+        type="submit"
+        class="h-[67px] w-full cursor-pointer appearance-none rounded-[18px] bg-[#E8F879] text-center text-[18px] leading-[24px] font-medium text-black disabled:cursor-default"
+      >
+        Отправить
+      </button>
+    </fieldset>
+    <span class="text-[16px] leading-[24px] text-[#F2F1F34D]">
+      Нажимая кнопку, вы даёте согласие<br />на обработку персональных данных
+    </span>
   </form>
 </section>
 <script>
   const form = document.querySelector('#registration-form');
+  const fieldset = document.querySelector('#registration-fieldset');
+  const submit = document.querySelector('#registration-submit');
+
   if (form) {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      const formData = new FormData(form);
-      const name = formData.get('name');
-      const email = formData.get('email');
-      const phone = formData.get('phone');
-      const telegram = formData.get('telegram');
-      console.log(name, email, phone, telegram);
+
+      const formData = new FormData(form as HTMLFormElement);
+
+      if (fieldset) {
+        fieldset.setAttribute('disabled', 'disabled');
+      }
+      if (submit) {
+        submit.innerHTML = 'Отправляем...';
+      }
+
+      fetch(
+        'https://script.google.com/macros/s/AKfycbzpPtO3V_hIfrs-O36r9bftiqSyj_YcRCbF24xEdBW_dxDeWu9oOTc15641lnKt2HqzTw/exec',
+        {
+          method: 'POST',
+          body: formData,
+        },
+      )
+        .then((response) => response.json())
+        .then(() => {
+          if (submit) {
+            submit.innerHTML = 'Мы зарегистрировали вас!';
+          }
+        })
+        .catch(() => {
+          if (submit) {
+            submit.innerHTML = 'Что-то пошло не так :(';
+          }
+        })
+        .finally(() => {
+          if (fieldset) {
+            fieldset.removeAttribute('disabled');
+          }
+        });
     });
   }
 </script>
