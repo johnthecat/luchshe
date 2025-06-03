@@ -24,18 +24,7 @@ import Rays from './Rays.svg';
   const rays = document.querySelector('#header-rays');
 
   const tl = gsap.timeline();
-  tl.fromTo(
-    logo,
-    {
-      autoAlpha: 0,
-      x: -50,
-    },
-    {
-      duration: 0.5,
-      autoAlpha: 1,
-      x: 0,
-    },
-  ).fromTo(
+  tl.fromTo(logo, { autoAlpha: 0, x: -50 }, { duration: 0.5, autoAlpha: 1, x: 0 }).fromTo(
     rays,
     {
       autoAlpha: 0,
