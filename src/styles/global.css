@@ -2,6 +2,10 @@
 @import "tailwindcss/preflight.css";
 @import "tailwindcss/utilities.css";
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Geologica", sans-serif;
     font-size: 20px;

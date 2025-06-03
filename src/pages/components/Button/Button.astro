@@ -5,9 +5,13 @@ const { onClick } = Astro.props;
 ---
 
 <div class="relative z-[1] w-fit">
-  <button class="button h-[68px] px-[64px] whitespace-nowrap text-black" onclick={onClick}>
+  <a
+    href="#registration"
+    class="button flex h-[68px] shrink-0 items-center px-[69px] whitespace-nowrap text-black"
+    onclick={onClick}
+  >
     <slot />
-  </button>
+  </a>
   <div class="button-first-layer"></div>
   <div class="button-second-layer"></div>
 </div>

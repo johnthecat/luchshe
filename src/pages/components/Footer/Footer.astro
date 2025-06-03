@@ -1,0 +1,71 @@
+---
+import Goo from './Goo.svg';
+import Arrow from './Arrow.svg';
+import RaysLeft from './RaysLeft.svg';
+import RaysRight from './RaysRight.svg';
+import Copyright from './Copyright.svg';
+import Logo from './Logo.svg';
+import Button from '../Button/Button.astro';
+---
+
+<section class="col-span-full m-[10px] flex pt-[80px]">
+  <div class="w-[ flex w-[498px] flex-col">
+    <div
+      class="flex h-[120px] items-center rounded-[30px] bg-[#CC3355] px-[40px] text-[20px] leading-[30px] font-light text-[#FDEAC3]"
+    >
+      Клиенты ждут таких специалистов, как вы
+    </div>
+    <div class="flex pt-[50px]">
+      <RaysLeft />
+      <RaysRight />
+    </div>
+  </div>
+  <div class="text-[#CC3355]">
+    <Goo />
+  </div>
+  <div class="w-full">
+    <div class="relative mb-[145px] flex rounded-[30px] bg-[#CC3355] px-[50px] pt-[40px] pb-[145px] text-[#FDEAC3]">
+      <span class="font-[Unbounded] text-[84px] leading-none font-bold">
+        Сделайте первый<br />шаг <Arrow class="inline" /> к лучшему
+      </span>
+      <span class="absolute right-[50px] bottom-[20px] text-[20px] font-light text-[#ECA9B8]"> Старт: 16 июня </span>
+      <div class="absolute bottom-[-35px] left-[50px]">
+        <Button>Стать лучше</Button>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="col-span-full m-[10px] flex items-end justify-between pb-[105px]">
+  <div id="header-logo" class="flex flex-col gap-[10px]">
+    <Logo />
+    <div class="w-[510px] pb-[20px]">
+      Сообщество и образовательная среда нового поколения для специалистов диджитал-рынка
+    </div>
+  </div>
+  <div class="flex gap-[5px]">
+    <a
+      href="#"
+      class="appearance-none rounded-[5px] border border-[#647990] px-[20px] py-[10px] text-[14px] leading-[20px] font-normal text-white"
+    >
+      Вконтакте
+    </a>
+    <a
+      href="#"
+      class="appearance-none rounded-[5px] border border-[#647990] px-[20px] py-[10px] text-[14px] leading-[20px] font-normal text-white"
+    >
+      Twitter
+    </a>
+    <a
+      href="#"
+      class="appearance-none rounded-[5px] border border-[#647990] px-[20px] py-[10px] text-[14px] leading-[20px] font-normal text-white"
+    >
+      YouTube
+    </a>
+  </div>
+  <div class="flex h-fit gap-[20px] text-[12px] leading-[18px] font-normal text-[#909FAD]">
+    <a href="#">Политика конфиденциальности</a>
+    <span class="flex items-center gap-[5px]">
+      <Copyright class="inline-block" />2025 luchshe
+    </span>
+  </div>
+</footer>
