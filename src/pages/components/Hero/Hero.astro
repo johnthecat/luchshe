@@ -8,44 +8,46 @@ import Stripes from './Stripes.astro';
 import Button from '../Button/Button.astro';
 ---
 
-<section id="hero" class="relative col-span-12 flex px-[10px]">
-  <div class="absolute top-[-160px] right-0 w-fit">
-    <Glow />
-  </div>
-  <div class="flex w-[498px] shrink-0 flex-col">
-    <div class="relative mr-[10px] flex h-[120px] items-center rounded-[30px] bg-[#CC3355] px-[40px] text-[#FDEAC3]">
-      Хотите зарабатывать больше на фрилансе<br />или запустить своё агентство?
-      <div class="absolute top-0 left-[100%] w-[10px] text-[#CC3355]">
-        <GooeySplit />
+<section id="hero" class="flex min-w-[1200px] justify-center px-[10px]">
+  <div class="relative flex w-[1200px]">
+    <div class="absolute top-[-160px] right-0 w-fit">
+      <Glow />
+    </div>
+    <div class="flex w-[498px] shrink-0 flex-col">
+      <div class="relative flex h-[120px] items-center rounded-[30px] bg-[#CC3355] px-[40px] text-[#FDEAC3]">
+        Хотите зарабатывать больше на фрилансе<br />или запустить своё агентство?
+      </div>
+      <div class="w-full pt-[20px] pr-[10px]">
+        <Stripes />
       </div>
     </div>
-    <div class="w-full pt-[20px] pr-[10px]">
-      <Stripes />
+    <div class="z-1 w-[10px] shrink-0 text-[#CC3355]">
+      <GooeySplit />
     </div>
-  </div>
-  <div class="flex w-full flex-col gap-[10px]">
-    <div class="relative flex flex-col gap-[20px] rounded-[30px] bg-[#CC3355] px-[40px] py-[40px] text-[#FDEAC3]">
-      <div class="font-[Unbounded] text-[84px] leading-[1.2] font-bold tracking-[3%]">
-        Мы покажем,<br />с чего <span class="relative top-[12px] inline-block"><Arrow /></span> начать!
-      </div>
-      <div class="w-[545px]">
-        Пройдите бесплатное обучение и получите пошаговый план: от первого клиента до стабильного дохода
-      </div>
+    <div class="flex w-full flex-col gap-[10px]">
+      <div class="relative flex flex-col gap-[20px] rounded-[30px] bg-[#CC3355] px-[40px] py-[40px] text-[#FDEAC3]">
+        <div class="font-[Unbounded] text-[84px] leading-[1.2] font-bold tracking-[3%]">
+          Мы покажем,<br />с чего <span class="relative top-[12px] inline-block"><Arrow /></span> начать!
+        </div>
+        <div class="w-[545px]">
+          Пройдите бесплатное обучение и получите пошаговый план: от первого клиента до стабильного дохода
+        </div>
 
-      <div class="absolute right-[49px] bottom-[4px] flex h-[150px] items-center text-[#ECA9B8]">Стартуем 16 июня</div>
-    </div>
-    <div>
-      <div
-        class="relative flex h-[266px] w-[633px] flex-col gap-[20px] rounded-[30px] bg-[#485766] p-[50px] text-[#FDEAC3]"
-      >
-        <div class="font-[Unbounded] text-[30px] leading-[44px] font-bold">
-          Не поучаем,<br />а освещаем путь
-        </div>
-        <div>
-          от перехода на фриланс<br />до открытия собственного агентства
-        </div>
-        <div class="absolute top-[100px] left-[90%]">
-          <Button>Начать обучение</Button>
+        <div class="flex items-center pt-[20px] text-[#ECA9B8]">Стартуем 16 июня</div>
+      </div>
+      <div>
+        <div
+          class="relative flex h-[266px] w-[467px] flex-col gap-[20px] rounded-[30px] bg-[#485766] p-[50px] text-[#FDEAC3]"
+        >
+          <div class="font-[Unbounded] text-[30px] leading-[44px] font-bold">
+            Не поучаем,<br />а освещаем путь
+          </div>
+          <div>
+            от перехода на фриланс<br />до открытия собственного агентства
+          </div>
+          <div class="absolute top-[100px] left-[90%]">
+            <Button>Начать обучение</Button>
+          </div>
         </div>
       </div>
     </div>
