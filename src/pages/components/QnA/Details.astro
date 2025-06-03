@@ -1,0 +1,18 @@
+---
+const { title, open, name } = Astro.props;
+---
+
+<details class="group" open={open} name={name}>
+  <summary
+    class="relative list-none appearance-none rounded-[20px] bg-white p-[20px] pr-[60px] text-[18px] leading-[24px] font-medium text-[#2B2B2B] group-open:rounded-b-none"
+  >
+    {title}
+    <div class="absolute top-[20px] right-[20px] text-[20px] group-open:hidden">+</div>
+    <div class="absolute top-[20px] right-[20px] hidden text-[20px] group-open:block">—</div>
+  </summary>
+  <div
+    class="rounded-b-[20px] bg-white p-[20px] pt-[4px] pr-[60px] text-[18px] leading-[24px] font-light text-[#384C61]"
+  >
+    <slot />
+  </div>
+</details>
